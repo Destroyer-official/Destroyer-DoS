@@ -16,12 +16,12 @@
 
 1. **Clone the repository:**
     ```bash
-    git clone [repository_url]
+    git clone https://github.com/Destroyer-official/Destroyer-DoS.git
     ```
 
 2. **Navigate to the directory:**
     ```bash
-    cd ddos-script
+    cd Destroyer-DoS
     ```
 
 3. **📦 Install the required packages:**

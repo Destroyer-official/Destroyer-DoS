@@ -61,7 +61,7 @@ if __name__ == '__main__':
 
     try:
         ip_address = args.ip
-        port = args.port
+        port = args.p
         num_processes = args.processes
         num_threads_per_process = args.threads
         processes = []

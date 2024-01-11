@@ -1,16 +1,26 @@
-### 🚨⚠️ **WARNING: This script is intended for educational purposes only. Unauthorized use may lead to legal repercussions. Always act responsibly and ensure proper authorization before using.** ⚠️🚨
+<div align="center">
+
+# 🌐 Destroyer-DoS 🌐
+
+</div>
+
+<div align="center">
+
+### 🚨⚠️ WARNING: For Educational Purposes Only! Unauthorized Use May Have Legal Consequences. Act Responsibly and Obtain Proper Authorization. ⚠️🚨
+
+</div>
 
 ### 📂 File Name: `ddos.py` - Destroyer Denial of Service Script
 
 ### 🌟 Overview
 
-🛡️ **Destroyer Denial of Service (DDoS) Script**: This is a straightforward yet potent tool designed exclusively for educational purposes. It orchestrates a Denial of Service (DoS) attack on a designated IP address and port, inundating it with TCP packets. The script harnesses the power of Python's asyncio and multiprocessing libraries for enhanced efficiency. Always deploy this script judiciously, ensuring its use is confined to networks or systems where you possess explicit permission.
+🛡️ **Destroyer Denial of Service (DDoS) Script**: A powerful educational tool designed to simulate a Denial of Service (DoS) attack. Orchestrates an assault on a specified IP and port, unleashing a barrage of TCP packets. Utilizes Python's asyncio and multiprocessing for maximum impact. Deploy responsibly in authorized environments.
 
 ### 🛠️ Features
 
-- 🎯 Inundate a target IP address with TCP packets.
-- 🚀 Employ asyncio for asynchronous packet transmission.
-- 🔄 Utilize multiprocessing to execute multiple script instances concurrently.
+- 🎯 Flood a target IP with TCP packets.
+- 🚀 Utilize asyncio for asynchronous packet transmission.
+- 🔄 Leverage multiprocessing for concurrent execution.
 
 ### 🚀 Usage
 
@@ -25,6 +35,20 @@
     ```
 
 3. **📦 Install the required packages:**
+    ```
+    Required modules are part of the Python standard library and usually included with Python installations. No separate installation is needed.
+
+    Module included in the standard library:
+       - socket
+       - random
+       - multiprocessing
+       - argparse (since Python 3.2)
+
+    Module that might need installation:
+       - asyncio (included in Python 3.4 and later, might need installation for older Python versions)
+    ```
+
+    For Python versions lower than 3.4:
     ```bash
     pip install -r requirements.txt
     ```
@@ -43,14 +67,18 @@
 
 ### 📚 Disclaimer
 
-⚠️ **Disclaimer**: This script is exclusively designed for educational purposes. Unauthorized or inappropriate use of this script may result in legal consequences. Always exercise caution and ensure proper authorization.
+⚠️ **Disclaimer**: This script is exclusively designed for educational purposes. Unauthorized or inappropriate use may result in legal consequences. Exercise caution and ensure proper authorization.
 
 ### 🤝 Contributing
 
-🤝 We welcome contributions! If you have any suggestions, enhancements, or encounter issues, please feel free to create a pull request or submit an issue in the repository.
+🤝 Contributions are welcome! For suggestions, enhancements, or issues, feel free to create a pull request or submit an issue in the repository.
 
 ### 📜 License
 
 ⚖️ This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for detailed licensing information.
 
+<div align="center">
+
 ---
+
+</div>

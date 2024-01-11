@@ -48,7 +48,7 @@
        - asyncio (included in Python 3.4 and later, might need installation for older Python versions)
     ```
 
-    For Python versions lower than 3.4:
+    For Python versions lower than 3.4.0:
     ```bash
     pip install -r requirements.txt
     ```

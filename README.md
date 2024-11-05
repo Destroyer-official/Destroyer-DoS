@@ -1,115 +1,177 @@
+
+---
+
 <div align="center">
 
-# 🌐 Destroyer-DoS 🌐
+# 🌐 Destroyer-DoS: Advanced DDoS Simulation Tool 🌐
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python](https://img.shields.io/badge/Python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 
 </div>
 
+---
+
 <div align="center">
 
-### 🚨⚠️ WARNING: For Educational Purposes Only! Unauthorized Use May Have Legal Consequences. Act Responsibly and Obtain Proper Authorization. ⚠️🚨
+### 🚨⚠️ WARNING: Educational Purposes Only! Unauthorized Use May Have Legal Consequences. Act Responsibly and Obtain Proper Authorization. ⚠️🚨
 
 </div>
 
 ---
 
-### 📂 File Name: `ddos.py` - Destroyer Denial of Service Script
+### 📂 File: `ddos.py` - Destroyer Denial of Service Simulation
 
 ---
 
 ### 🌟 Overview
 
-🛡️ **Destroyer Denial of Service (DDoS) Script**: A powerful educational tool designed to simulate a Denial of Service (DoS) attack. Orchestrates an assault on a specified IP and port, unleashing a barrage of TCP packets. Utilizes Python's asyncio and multiprocessing for maximum impact. Deploy responsibly in authorized environments.
+**Destroyer-DoS** is an educational script for simulating Distributed Denial of Service (DDoS) attacks. This tool uses Python’s async and multiprocessing capabilities to unleash high-impact network stress on specified IPs and ports. Ideal for testing network resilience in authorized environments. 🚀
 
 ---
 
 ### 🛠️ Features
 
-- 🎯 Flood a target IP with TCP packets.
-- 🚀 Utilize asyncio for asynchronous packet transmission.
-- 🔄 Leverage multiprocessing for concurrent execution.
+- 🎯 **Multi-Protocol Support**: TCP, UDP, HTTP, HTTPS, ICMP
+- 🚀 **Asynchronous Packet Sending**: Fast and non-blocking
+- 🔄 **Multiprocessing**: High-throughput operations
+- 🧩 **Flexible Packet Size, Process & Thread Control**
+- 💻 **Cross-Platform Compatible** with Robust Error Handling
 
 ---
 
-### 🚀 Usage
+### 🚀 Installation & Setup
 
-1. **Clone the repository:**
+1. **Clone the Repository**:
     ```bash
     git clone https://github.com/Destroyer-official/Destroyer-DoS.git
     ```
 
-2. **Navigate to the directory:**
+2. **Navigate to the Directory**:
     ```bash
     cd Destroyer-DoS
     ```
 
----
-
-3. **📦 Install the required packages:**
-    - Required modules are part of the Python standard library and usually included with Python installations. No separate installation is needed.
- *Module included in the standard library:
-       - socket
-       - random
-       - multiprocessing
-       - argparse (since Python 3.2)
-
-    For Python versions lower than 3.4.0:
+3. **Install Required Packages**:
+   - Standard library dependencies are generally included with Python. If you're using Python <3.4, install any missing modules listed in `requirements.txt`:
     ```bash
     pip install -r requirements.txt
     ```
----
-
-4. **✨ Execute the script using command-line arguments:**
-    ```bash
-    python ddos.py -ip [Target_IP] -p [Target_Port] -pr [Number_of_Processes] -t [Number_of_Threads per process] 
-    ```
-    ```bash
-    python ddos.py -ip 192.168.0.1 -p 80 -pr 40 -t 20 
-    ```
 
 ---
 
-### 💻 Command-Line Arguments
+### 🌐 Command Usage Examples
 
-- `-ip`: Specify the target IP address.
-- `-p`: Define the target port number.
-- `-pr`: Set the number of processes to run concurrently (default: 30).
-- `-t`: Define the number of threads per process (default: 40).
+To execute the script, run:
+
+```bash
+python ddos.py -ip [Target_IP] -p [Target_Port] -pr [Processes] -t [Threads] -[Protocol]
+```
+
+Examples:
+
+#### **Single Protocol Attack** 🌊
+- **TCP Attack**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80 -pr 30 -t 20 -T
+    ```
+- **UDP Attack**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 53 -pr 30 -t 20 -U
+    ```
+- **ICMP Ping Attack**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -pr 30 -t 20 -I
+    ```
+- **HTTP Flood**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80 -pr 30 -t 20 -H
+    ```
+- **HTTPS Flood**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 443 -pr 30 -t 20 -S
+    ```
+
+#### **All Protocols Combined Attack** 🌐
+- Run all protocols simultaneously:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80 -pr 30 -t 20 -A
+    ```
+
+#### **Advanced Options** ⚙️
+- **Custom Port Range**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80-90 -pr 30 -t 20 -T
+    ```
+- **Multiple Ports**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80,443,8080 -pr 30 -t 20 -U
+    ```
+- **Specify Packet Size**:
+    ```bash
+    python ddos.py -ip 192.168.0.1 -p 80 -pr 30 -t 20 -ps 1024 -T
+    ```
+
+---
+
+### 💻 Command-Line Arguments Guide
+
+| Argument       | Description                                                                                       |
+|----------------|---------------------------------------------------------------------------------------------------|
+| `-ip`          | Target IP address.                                                                                |
+| `-p`           | Target port (can be a single port, range, or multiple ports separated by commas).                 |
+| `-T`           | Use TCP protocol for the test.                                                                    |
+| `-U`           | Use UDP protocol for the test.                                                                    |
+| `-I`           | Use ICMP protocol (ping simulation).                                                              |
+| `-H`           | Use HTTP protocol.                                                                                |
+| `-S`           | Use HTTPS protocol.                                                                               |
+| `-A`           | Run all protocols concurrently.                                                                   |
+| `-pr`          | Number of processes to run concurrently (default: 30).                                            |
+| `-t`           | Number of threads per process (default: 40).                                                      |
+| `-ps`          | Packet size in bytes (default: maximum for selected protocol).                                    |
 
 ---
 
 ### 📚 How It Works
 
-1. **IP Info Gathering:**
-   - Resolves the target hostname.
-   - Initiates asynchronous packet sending tasks.
+1. **Target Preparation**:
+   - Validates target IP and port information.
+   - Establishes CPU affinity to optimize resource usage on multi-core systems.
 
-2. **Packet Sending:**
-   - Establishes a TCP connection to the target IP and port.
-   - Sends a continuous stream of random data.
+2. **Protocol-Specific Packet Sending**:
+   - **TCP**: Creates TCP connections and sends continuous random data streams.
+   - **UDP**: Sends random UDP packets to impact network bandwidth.
+   - **ICMP**: Simulates ping requests using ICMP packets.
+   - **HTTP/HTTPS**: Sends asynchronous HTTP/HTTPS requests to simulate web server load.
+
+3. **Process and Thread Management**:
+   - Distributes load across multiple processes and threads, simulating distributed attacks.
 
 ---
 
-### 📜 Disclaimer
+### ⚠️ Disclaimer
 
-⚠️ **Disclaimer**: This script is exclusively designed for educational purposes. Unauthorized or inappropriate use may result in legal consequences. Exercise caution and ensure proper authorization.
+**Disclaimer**: This script is intended for educational purposes only and should be used to test network robustness in authorized environments. Unauthorized use may have legal consequences. Always ensure proper authorization.
 
 ---
 
 ### 🤝 Contributing
 
-🤝 Contributions are welcome! For suggestions, enhancements, or issues, feel free to create a pull request or submit an issue in the repository.
+Contributions are welcome! If you have ideas for improvements, feel free to submit a pull request or create an issue.
 
 ---
 
 ### 📜 License
 
-⚖️ This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for detailed licensing information.
-
-<div align="center">
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
+<div align="center">
+
+Happy Testing! 🚀🌐
+
 </div>
+
+---
+

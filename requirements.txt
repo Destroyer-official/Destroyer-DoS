@@ -1,3 +1,6 @@
+aiohttp
+psutil
+uvloop
 asyncio
 argparse
 multiprocessing
